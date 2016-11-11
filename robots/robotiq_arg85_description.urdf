@@ -1,111 +1,59 @@
-<robot
-  name="robotiq_arg85_description">
-  <link
-    name="robotiq_85_base_link">
+<robot name="robotiq_arg85_description">
+  <link name="robotiq_85_base_link">
     <inertial>
-      <origin
-        xyz="0.00021987 -2.3546E-10 0.030163"
-        rpy="0 0 0" />
-      <mass
-        value="0.30915" />
-      <inertia
-        ixx="0.00028972"
-        ixy="-5.7879E-10"
-        ixz="-1.8543E-06"
-        iyy="0.00030737"
-        iyz="1.682E-12"
-        izz="0.00019914" />
+      <origin xyz="0.00021987 -2.3546E-10 0.030163" rpy="0 0 0" />
+      <mass value="0.30915" />
+      <inertia ixx="0.00028972" ixy="-5.7879E-10" ixz="-1.8543E-06" iyy="0.00030737" iyz="1.682E-12" izz="0.00019914" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robotiq_arg85_description/meshes/robotiq_85_base_link_fine.STL" />
+        <mesh filename="package://robotiq_arg85_description/meshes/robotiq_85_base_link_fine.stl" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.1 0.1 0.1 1" />
+      <material name="">
+        <color rgba="0.1 0.1 0.1 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robotiq_arg85_description/meshes/robotiq_85_base_link_coarse.STL" />
+        <mesh filename="package://robotiq_arg85_description/meshes/robotiq_85_base_link_coarse.stl" />
       </geometry>
     </collision>
   </link>
-  <link
-    name="left_outer_knuckle">
+  <link name="left_outer_knuckle">
     <inertial>
-      <origin
-        xyz="0.0178331863169983 3.68915177224286E-11 0.0021442477325704"
-        rpy="0 0 0" />
-      <mass
-        value="0.00684838849434396" />
-      <inertia
-        ixx="2.66832029033166E-07"
-        ixy="1.66142314639824E-15"
-        ixz="1.45945633322873E-07"
-        iyy="1.3889233257419E-06"
-        iyz="2.82951161241588E-15"
-        izz="1.26603336914415E-06" />
+      <origin xyz="0.0178331863169983 3.68915177224286E-11 0.0021442477325704" rpy="0 0 0" />
+      <mass value="0.00684838849434396" />
+      <inertia ixx="2.66832029033166E-07" ixy="1.66142314639824E-15" ixz="1.45945633322873E-07" iyy="1.3889233257419E-06" iyz="2.82951161241588E-15" izz="1.26603336914415E-06" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robotiq_arg85_description/meshes/outer_knuckle_fine.STL" />
+        <mesh filename="package://robotiq_arg85_description/meshes/outer_knuckle_fine.stl" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.1 0.1 0.1 1" />
+      <material name="">
+        <color rgba="0.1 0.1 0.1 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robotiq_arg85_description/meshes/outer_knuckle_coarse.STL" />
+        <mesh filename="package://robotiq_arg85_description/meshes/outer_knuckle_coarse.stl" />
       </geometry>
     </collision>
   </link>
-  <joint
-    name="finger_joint"
-    type="revolute">
-    <origin
-      xyz="0.0306011444260539 0 0.0627920162695395"
-      rpy="0 0 0" />
-    <parent
-      link="robotiq_85_base_link" />
-    <child
-      link="left_outer_knuckle" />
-    <axis
-      xyz="0 -1 0" />
-    <limit
-	  lower="0"
-      upper="0.725"
-      velocity="2.0"
-      effort="1000" />
+  <joint name="finger_joint" type="revolute">
+    <origin xyz="0.0306011444260539 0 0.0627920162695395" rpy="0 0 0" />
+    <parent link="robotiq_85_base_link" />
+    <child link="left_outer_knuckle" />
+    <axis xyz="0 -1 0" />
+    <limit lower="0" upper="0.725" velocity="2.0" effort="1000" />
   </joint>
-  <link
-    name="left_outer_finger">
+  <link name="left_outer_finger">
     <inertial>
-      <origin
-        xyz="0.00131451599174296 2.88942057994543E-15 0.0215404163180413"
-        rpy="0 0 0" />
-      <mass
-        value="0.0273093985570947" />
+      <origin xyz="0.00131451599174296 2.88942057994543E-15 0.0215404163180413" rpy="0 0 0" />
+      <mass value="0.0273093985570947" />
       <inertia
         ixx="8.51629628283022E-06"
         ixy="2.58174336207405E-19"
@@ -115,94 +63,60 @@
         izz="2.25006832221981E-06" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robotiq_arg85_description/meshes/outer_finger_fine.STL" />
+        <mesh filename="package://robotiq_arg85_description/meshes/outer_finger_fine.stl" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.1 0.1 0.1 1" />
+      <material name="">
+        <color rgba="0.1 0.1 0.1 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robotiq_arg85_description/meshes/outer_finger_coarse.STL" />
+        <mesh filename="package://robotiq_arg85_description/meshes/outer_finger_coarse.stl" />
       </geometry>
     </collision>
   </link>
-  <joint
-    name="left_outer_finger_joint"
-    type="fixed">
-    <origin
-      xyz="0.0316910442266543 0 -0.00193396375724605"
-      rpy="0 0 0" />
-    <parent
-      link="left_outer_knuckle" />
-    <child
-      link="left_outer_finger" />
-    <axis
-      xyz="0 -1 0" />
+  <joint name="left_outer_finger_joint" type="fixed">
+    <origin xyz="0.0316910442266543 0 -0.00193396375724605" rpy="0 0 0" />
+    <parent link="left_outer_knuckle" />
+    <child link="left_outer_finger" />
+    <axis xyz="0 -1 0" />
   </joint>
-  <link
-    name="left_inner_knuckle">
+  <link name="left_inner_knuckle">
     <inertial>
-      <origin
-        xyz="0.017097546626628 -3.93808524389535E-10 0.0224918438201868"
-        rpy="0 0 0" />
-      <mass
-        value="0.0110930853895903" />
+      <origin xyz="0.017097546626628 -3.93808524389535E-10 0.0224918438201868" rpy="0 0 0" />
+      <mass value="0.0110930853895903" />
       <inertia
-        ixx="4.23392770691541E-06"
-        ixy="5.748978936968E-15"
-        ixz="1.78855677119788E-06"
-        iyy="3.96548790524392E-06"
-        iyz="1.05464666369669E-14"
-        izz="3.24068002883007E-06" />
+          ixx="4.23392770691541E-06"
+          ixy="5.748978936968E-15"
+          ixz="1.78855677119788E-06"
+          iyy="3.96548790524392E-06"
+          iyz="1.05464666369669E-14"
+          izz="3.24068002883007E-06" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robotiq_arg85_description/meshes/inner_knuckle_fine.STL" />
+        <mesh filename="package://robotiq_arg85_description/meshes/inner_knuckle_fine.stl" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.1 0.1 0.1 1" />
+      <material name="">
+        <color rgba="0.1 0.1 0.1 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robotiq_arg85_description/meshes/inner_knuckle_coarse.STL" />
+        <mesh filename="package://robotiq_arg85_description/meshes/inner_knuckle_coarse.stl" />
       </geometry>
     </collision>
   </link>
-  <joint
-    name="left_inner_knuckle_joint"
-    type="revolute">
-    <origin
-      xyz="0.0127000000001501 0 0.0693074999999639"
-      rpy="0 0 0" />
-    <parent
-      link="robotiq_85_base_link" />
-    <child
-      link="left_inner_knuckle" />
-    <axis
-      xyz="0 -1 0" />
+  <joint name="left_inner_knuckle_joint" type="revolute">
+    <origin xyz="0.0127000000001501 0 0.0693074999999639" rpy="0 0 0" />
+    <parent link="robotiq_85_base_link" />
+    <child link="left_inner_knuckle" />
+    <axis xyz="0 -1 0" />
     <limit
       lower="0"
       upper="0.8757"
@@ -235,7 +149,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://robotiq_arg85_description/meshes/inner_finger_fine.STL" />
+          filename="package://robotiq_arg85_description/meshes/inner_finger_fine.stl" />
       </geometry>
       <material
         name="">
@@ -249,7 +163,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://robotiq_arg85_description/meshes/inner_finger_coarse.STL" />
+          filename="package://robotiq_arg85_description/meshes/inner_finger_coarse.stl" />
       </geometry>
     </collision>
   </link>
@@ -297,7 +211,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://robotiq_arg85_description/meshes/inner_knuckle_fine.STL" />
+          filename="package://robotiq_arg85_description/meshes/inner_knuckle_fine.stl" />
       </geometry>
       <material
         name="">
@@ -311,7 +225,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://robotiq_arg85_description/meshes/inner_knuckle_coarse.STL" />
+          filename="package://robotiq_arg85_description/meshes/inner_knuckle_coarse.stl" />
       </geometry>
     </collision>
   </link>
@@ -359,7 +273,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://robotiq_arg85_description/meshes/inner_finger_fine.STL" />
+          filename="package://robotiq_arg85_description/meshes/inner_finger_fine.stl" />
       </geometry>
       <material
         name="">
@@ -373,7 +287,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://robotiq_arg85_description/meshes/inner_finger_coarse.STL" />
+          filename="package://robotiq_arg85_description/meshes/inner_finger_coarse.stl" />
       </geometry>
     </collision>
   </link>
@@ -421,7 +335,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://robotiq_arg85_description/meshes/outer_knuckle_fine.STL" />
+          filename="package://robotiq_arg85_description/meshes/outer_knuckle_fine.stl" />
       </geometry>
       <material
         name="">
@@ -430,12 +344,9 @@
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robotiq_arg85_description/meshes/outer_knuckle_coarse.STL" />
+        <mesh filename="package://robotiq_arg85_description/meshes/outer_knuckle_coarse.stl" />
       </geometry>
     </collision>
   </link>
@@ -456,19 +367,12 @@
       upper="0.8757"
       velocity="2.0"
       effort="1000" />
-    <mimic 
-      joint="finger_joint"
-      multiplier="-1"
-      offset="0" />
+    <mimic joint="finger_joint" multiplier="-1" offset="0" />
   </joint>
-  <link
-    name="right_outer_finger">
+  <link name="right_outer_finger">
     <inertial>
-      <origin
-        xyz="0.00108844269639009 -2.611488350845E-15 0.0215530225245502"
-        rpy="0 0 0" />
-      <mass
-        value="0.0273093985570947" />
+      <origin xyz="0.00108844269639009 -2.611488350845E-15 0.0215530225245502" rpy="0 0 0" />
+      <mass value="0.0273093985570947" />
       <inertia
         ixx="8.52366028592721E-06"
         ixy="3.41683380899422E-19"
@@ -483,35 +387,23 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://robotiq_arg85_description/meshes/outer_finger_fine.STL" />
+          filename="package://robotiq_arg85_description/meshes/outer_finger_fine.stl" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.1 0.1 0.1 1" />
+      <material name="">
+        <color rgba="0.1 0.1 0.1 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robotiq_arg85_description/meshes/outer_finger_coarse.STL" />
+        <mesh filename="package://robotiq_arg85_description/meshes/outer_finger_coarse.stl" />
       </geometry>
     </collision>
   </link>
-  <joint
-    name="right_outer_finger_joint"
-    type="fixed">
-    <origin
-      xyz="0.0317095909367246 0 -0.0016013564954687"
-      rpy="0 0 0" />
-    <parent
-      link="right_outer_knuckle" />
-    <child
-      link="right_outer_finger" />
-    <axis
-      xyz="0 1 0" />
+  <joint name="right_outer_finger_joint" type="fixed">
+    <origin xyz="0.0317095909367246 0 -0.0016013564954687" rpy="0 0 0" />
+    <parent link="right_outer_knuckle" />
+    <child link="right_outer_finger" />
+    <axis xyz="0 1 0" />
   </joint>
 </robot>
