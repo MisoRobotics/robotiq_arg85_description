@@ -307,4 +307,5 @@
     <child link="right_outer_finger" />
     <axis xyz="0 1 0" />
   </joint>
+    <xacro:robotiq_arg85_transmission/>
 </robot>
