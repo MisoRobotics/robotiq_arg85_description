@@ -1,4 +1,6 @@
-<robot name="robotiq_arg85_description">
+<?xml version="1.0"?>
+<robot  xmlns:xacro="http://www.ros.org/wiki/xacro" name="robotiq_arg85_description">
+  <xacro:include filename="$(find robotiq_arg85_description)/robots/robotiq_arg85.transmission.xacro" />
   <link name="robotiq_85_base_link">
     <inertial>
       <origin xyz="0.00021987 -2.3546E-10 0.030163" rpy="0 0 0" />
@@ -25,7 +27,13 @@
     <inertial>
       <origin xyz="0.0178331863169983 3.68915177224286E-11 0.0021442477325704" rpy="0 0 0" />
       <mass value="0.00684838849434396" />
-      <inertia ixx="2.66832029033166E-07" ixy="1.66142314639824E-15" ixz="1.45945633322873E-07" iyy="1.3889233257419E-06" iyz="2.82951161241588E-15" izz="1.26603336914415E-06" />
+      <inertia
+          ixx="2.66832029033166E-07"
+          ixy="1.66142314639824E-15"
+          ixz="1.45945633322873E-07"
+          iyy="1.3889233257419E-06"
+          iyz="2.82951161241588E-15"
+          izz="1.26603336914415E-06" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -117,24 +125,14 @@
     <parent link="robotiq_85_base_link" />
     <child link="left_inner_knuckle" />
     <axis xyz="0 -1 0" />
-    <limit
-      lower="0"
-      upper="0.8757"
-      velocity="2.0"
-      effort="1000" />
-    <mimic 
-      joint="finger_joint"
-      multiplier="1"
-      offset="0" />
+    <limit lower="0" upper="0.8757" velocity="2.0" effort="1000" />
+    <mimic joint="finger_joint" multiplier="1" offset="0" />
   </joint>
   <link
     name="left_inner_finger">
     <inertial>
-      <origin
-        xyz="0.0060275613594574 -6.29183141465421E-15 0.00669925693133241"
-        rpy="0 0 0" />
-      <mass
-        value="0.00724255346165745" />
+      <origin xyz="0.0060275613594574 -6.29183141465421E-15 0.00669925693133241" rpy="0 0 0" />
+      <mass value="0.00724255346165745" />
       <inertia
         ixx="1.47824274053603E-06"
         ixy="-3.94884463570303E-19"
@@ -144,59 +142,33 @@
         izz="4.77151336838364E-07" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robotiq_arg85_description/meshes/inner_finger_fine.stl" />
+        <mesh filename="package://robotiq_arg85_description/meshes/inner_finger_fine.stl" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.1 0.1 0.1 1" />
+      <material name="">
+        <color rgba="0.1 0.1 0.1 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robotiq_arg85_description/meshes/inner_finger_coarse.stl" />
+        <mesh filename="package://robotiq_arg85_description/meshes/inner_finger_coarse.stl" />
       </geometry>
     </collision>
   </link>
-  <joint
-    name="left_inner_finger_joint"
-    type="revolute">
-    <origin
-      xyz="0.034585310861294 0 0.0454970193817975"
-      rpy="0 0 0" />
-    <parent
-      link="left_inner_knuckle" />
-    <child
-      link="left_inner_finger" />
-    <axis
-      xyz="0 -1 0" />
-    <limit
-      lower="0"
-      upper="0.8757"
-      velocity="2.0"
-      effort="1000" />
-    <mimic 
-      joint="finger_joint"
-      multiplier="-1"
-      offset="0" />
+  <joint name="left_inner_finger_joint" type="revolute">
+    <origin xyz="0.034585310861294 0 0.0454970193817975" rpy="0 0 0" />
+    <parent link="left_inner_knuckle" />
+    <child link="left_inner_finger" />
+    <axis xyz="0 -1 0" />
+    <limit lower="0" upper="0.8757" velocity="2.0" effort="1000" />
+    <mimic joint="finger_joint" multiplier="-1" offset="0" />
   </joint>
-  <link
-    name="right_inner_knuckle">
+  <link name="right_inner_knuckle">
     <inertial>
-      <origin
-        xyz="0.0168606186773776 3.93808471820465E-10 0.0226699950793434"
-        rpy="0 0 0" />
-      <mass
-        value="0.0110930853895903" />
+      <origin xyz="0.0168606186773776 3.93808471820465E-10 0.0226699950793434" rpy="0 0 0" />
+      <mass value="0.0110930853895903" />
       <inertia
         ixx="4.27134775939882E-06"
         ixy="-8.53568456728898E-15"
@@ -206,59 +178,33 @@
         izz="3.20325997634666E-06" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robotiq_arg85_description/meshes/inner_knuckle_fine.stl" />
+        <mesh filename="package://robotiq_arg85_description/meshes/inner_knuckle_fine.stl" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.1 0.1 0.1 1" />
+      <material name="">
+        <color rgba="0.1 0.1 0.1 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robotiq_arg85_description/meshes/inner_knuckle_coarse.stl" />
+        <mesh filename="package://robotiq_arg85_description/meshes/inner_knuckle_coarse.stl" />
       </geometry>
     </collision>
   </link>
-  <joint
-    name="right_inner_knuckle_joint"
-    type="revolute">
-    <origin
-      xyz="-0.0126999999998499 0 0.0693075000000361"
-      rpy="0 0 3.14159265358979" />
-    <parent
-      link="robotiq_85_base_link" />
-    <child
-      link="right_inner_knuckle" />
-    <axis
-      xyz="0 1 0" />
-    <limit
-      lower="0"
-      upper="0.8757"
-      velocity="2.0"
-      effort="1000" />
-    <mimic 
-      joint="finger_joint"
-      multiplier="-1"
-      offset="0" />
+  <joint name="right_inner_knuckle_joint" type="revolute">
+    <origin xyz="-0.0126999999998499 0 0.0693075000000361" rpy="0 0 3.14159265358979" />
+    <parent link="robotiq_85_base_link" />
+    <child link="right_inner_knuckle" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="0.8757" velocity="2.0" effort="1000" />
+    <mimic joint="finger_joint" multiplier="-1" offset="0" />
   </joint>
-  <link
-    name="right_inner_finger">
+  <link name="right_inner_finger">
     <inertial>
-      <origin
-        xyz="0.00602756228812038 -6.47284509480176E-15 0.00669925609578108"
-        rpy="0 0 0" />
-      <mass
-        value="0.00724255346165744" />
+      <origin xyz="0.00602756228812038 -6.47284509480176E-15 0.00669925609578108" rpy="0 0 0" />
+      <mass value="0.00724255346165744" />
       <inertia
         ixx="1.47824283625957E-06"
         ixy="-3.95952064019123E-19"
@@ -268,59 +214,33 @@
         izz="4.77151241114822E-07" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robotiq_arg85_description/meshes/inner_finger_fine.stl" />
+        <mesh filename="package://robotiq_arg85_description/meshes/inner_finger_fine.stl" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.1 0.1 0.1 1" />
+      <material name="">
+        <color rgba="0.1 0.1 0.1 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robotiq_arg85_description/meshes/inner_finger_coarse.stl" />
+        <mesh filename="package://robotiq_arg85_description/meshes/inner_finger_coarse.stl" />
       </geometry>
     </collision>
   </link>
-  <joint
-    name="right_inner_finger_joint"
-    type="revolute">
-    <origin
-      xyz="0.0341060475457406 0 0.0458573878541688"
-      rpy="0 0 0" />
-    <parent
-      link="right_inner_knuckle" />
-    <child
-      link="right_inner_finger" />
-    <axis
-      xyz="0 1 0" />
-    <limit
-      lower="0"
-      upper="0.8757"
-      velocity="2.0"
-      effort="1000" />
-    <mimic 
-      joint="finger_joint"
-      multiplier="1"
-      offset="0" />
+  <joint name="right_inner_finger_joint" type="revolute">
+    <origin xyz="0.0341060475457406 0 0.0458573878541688" rpy="0 0 0" />
+    <parent link="right_inner_knuckle" />
+    <child link="right_inner_finger" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="0.8757" velocity="2.0" effort="1000" />
+    <mimic joint="finger_joint" multiplier="1" offset="0" />
   </joint>
-  <link
-    name="right_outer_knuckle">
+  <link name="right_outer_knuckle">
     <inertial>
-      <origin
-        xyz="0.0178097074051638 3.60493211424024E-11 0.00233123458346721"
-        rpy="0 0 0" />
-      <mass
-        value="0.00684838849401352" />
+      <origin xyz="0.0178097074051638 3.60493211424024E-11 0.00233123458346721" rpy="0 0 0" />
+      <mass value="0.00684838849401352" />
       <inertia
         ixx="2.70004361573169E-07"
         ixy="1.59579467624491E-15"
@@ -330,17 +250,12 @@
         izz="1.26286103637978E-06" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robotiq_arg85_description/meshes/outer_knuckle_fine.stl" />
+        <mesh filename="package://robotiq_arg85_description/meshes/outer_knuckle_fine.stl" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.1 0.1 0.1 1" />
+      <material name="">
+        <color rgba="0.1 0.1 0.1 1" />
       </material>
     </visual>
     <collision>
@@ -350,23 +265,12 @@
       </geometry>
     </collision>
   </link>
-  <joint
-    name="right_outer_knuckle_joint"
-    type="revolute">
-    <origin
-      xyz="-0.0306011444258893 0 0.0627920162695395"
-      rpy="0 0 3.14159265358979" />
-    <parent
-      link="robotiq_85_base_link" />
-    <child
-      link="right_outer_knuckle" />
-    <axis
-      xyz="0 1 0" />
-    <limit
-      lower="0"
-      upper="0.8757"
-      velocity="2.0"
-      effort="1000" />
+  <joint name="right_outer_knuckle_joint" type="revolute">
+    <origin xyz="-0.0306011444258893 0 0.0627920162695395" rpy="0 0 3.14159265358979" />
+    <parent link="robotiq_85_base_link" />
+    <child link="right_outer_knuckle" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="0.8757" velocity="2.0" effort="1000" />
     <mimic joint="finger_joint" multiplier="-1" offset="0" />
   </joint>
   <link name="right_outer_finger">
@@ -382,12 +286,9 @@
         izz="2.24270431912283E-06" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robotiq_arg85_description/meshes/outer_finger_fine.stl" />
+        <mesh filename="package://robotiq_arg85_description/meshes/outer_finger_fine.stl" />
       </geometry>
       <material name="">
         <color rgba="0.1 0.1 0.1 1" />
